@@ -3,6 +3,8 @@ import { faMoon as regularFaMoon } from "@fortawesome/free-regular-svg-icons";
 import { faMoon as solidFaMoon } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
+import styles from "../styles/header.styles.module.css";
+
 export default function Header() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   useEffect(() => {
@@ -16,10 +18,10 @@ export default function Header() {
     document.body.classList.toggle("dark");
   }
   return (
-    <header>
+    <header className={styles.header}>
       <div>
         <h1>Where in the world?</h1>
-        <button className="dark-mode-button" onClick={handleClick}>
+        <button className={styles.darkModeButton} onClick={handleClick}>
           <FontAwesomeIcon icon={isDarkMode ? solidFaMoon : regularFaMoon} />
           <p>Dark Mode</p>
         </button>

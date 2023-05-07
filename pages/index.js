@@ -1,7 +1,6 @@
-import SearchBar from "@/components/SearchBar";
-import RegionSelecting from "@/components/RegionSelecting";
-import CountryElement from "@/components/CountryElement";
 import Header from "@/components/Header";
+import SearchingForm from "@/components/SearchingForm";
+import CountryElement from "@/components/CountryElement";
 
 import { useEffect, useState } from "react";
 
@@ -35,10 +34,7 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <form>
-          <SearchBar onChange={onChangeHandle} />
-          <RegionSelecting selectedRegion={selectedRegion} onSelect={onSelectHandle} />
-        </form>
+        <SearchingForm onSearch={onChangeHandle} onSelectRegion={onSelectHandle} selectedRegion={selectedRegion} />
         <div className="countriesList">
           {filteredCountries.map((country) => (
             <CountryElement country={country} />

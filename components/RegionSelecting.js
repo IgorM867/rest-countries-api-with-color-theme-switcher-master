@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
+import styles from "../styles/form.styles.module.css";
+
 export default function RegionSelecting({ onSelect, selectedRegion }) {
   const [isActive, setIsActive] = useState(false);
 
@@ -13,39 +15,39 @@ export default function RegionSelecting({ onSelect, selectedRegion }) {
   };
   return (
     <>
-      <div className="drop-down-menu" onClick={() => dropDownHandleClick()}>
+      <div className={styles.dropDownMenu} onClick={() => dropDownHandleClick()}>
         <p>{selectedRegion ? selectedRegion : "Filter by Region"}</p>
         <FontAwesomeIcon icon={faChevronDown} className="icon" />
         {isActive && (
-          <div className="drop-down-menu-options">
+          <div className={styles.dropDownMenuOptions}>
             {selectedRegion && (
-              <div className="drop-down-menu-option" onClick={() => handleClick(null)}>
+              <div className={styles.dropDownMenuOption} onClick={() => handleClick(null)}>
                 All
               </div>
             )}
             {selectedRegion != "Africa" && (
-              <div className="drop-down-menu-option" onClick={() => handleClick("Africa")}>
+              <div className={styles.dropDownMenuOption} onClick={() => handleClick("Africa")}>
                 Africa
               </div>
             )}
             {selectedRegion != "Americas" && (
-              <div className="drop-down-menu-option" onClick={() => handleClick("Americas")}>
+              <div className={styles.dropDownMenuOption} onClick={() => handleClick("Americas")}>
                 America
               </div>
             )}
 
             {selectedRegion != "Asia" && (
-              <div className="drop-down-menu-option" onClick={() => handleClick("Asia")}>
+              <div className={styles.dropDownMenuOption} onClick={() => handleClick("Asia")}>
                 Asia
               </div>
             )}
             {selectedRegion != "Europe" && (
-              <div className="drop-down-menu-option" onClick={() => handleClick("Europe")}>
+              <div className={styles.dropDownMenuOption} onClick={() => handleClick("Europe")}>
                 Europe
               </div>
             )}
             {selectedRegion != "Oceania" && (
-              <div className="drop-down-menu-option" onClick={() => handleClick("Oceania")}>
+              <div className={styles.dropDownMenuOption} onClick={() => handleClick("Oceania")}>
                 Oceania
               </div>
             )}

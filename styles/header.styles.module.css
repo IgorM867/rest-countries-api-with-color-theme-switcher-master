@@ -1,0 +1,24 @@
+.header {
+  background-color: var(--Elements-Color);
+  box-shadow: 0px 0px 5px -2px var(--Element-Box-Shadow-Color);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.header > div {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.darkModeButton {
+  background-color: var(--Elements-Color);
+  border: 0;
+  color: var(--Text-Color);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1em;
+  width: 100px;
+}
