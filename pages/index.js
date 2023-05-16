@@ -37,7 +37,7 @@ export default function Home() {
         <SearchingForm onSearch={onChangeHandle} onSelectRegion={onSelectHandle} selectedRegion={selectedRegion} />
         <div className="countriesList">
           {filteredCountries.map((country) => (
-            <CountryElement country={country} />
+            <CountryElement country={country} key={country.name.common} />
           ))}
         </div>
       </main>

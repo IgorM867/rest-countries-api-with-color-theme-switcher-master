@@ -3,7 +3,6 @@ import Link from "next/link";
 export default function CountryElement({ country }) {
   return (
     <Link
-      key={country.name.common}
       href={{
         pathname: "/[countryName]",
         query: { countryName: country.name.common },

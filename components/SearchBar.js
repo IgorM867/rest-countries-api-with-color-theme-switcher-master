@@ -9,7 +9,7 @@ export default function SearchBar({ onChange }) {
       <label htmlFor="text-input">
         <FontAwesomeIcon className={styles.searchBarIcon} icon={faMagnifyingGlass} />
       </label>
-      <input onChange={onChange} className={styles.searchBarInput} id="text-input" placeholder="Search for a country..." autocomplete="off" />
+      <input onChange={onChange} className={styles.searchBarInput} id="text-input" placeholder="Search for a country..." autoComplete="off" />
     </div>
   );
 }

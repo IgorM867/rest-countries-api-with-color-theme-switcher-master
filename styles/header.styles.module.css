@@ -22,3 +22,24 @@
   font-size: 1.1em;
   width: 100px;
 }
+@media only screen and (max-width: 1300px) {
+  .header > div {
+    padding: 1% 2%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .header {
+    font-size: 0.9em;
+  }
+  .darkModeButton {
+    width: fit-content;
+  }
+  .darkModeButton p {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .header {
+    font-size: 0.7em;
+  }
+}

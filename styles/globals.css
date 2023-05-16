@@ -125,24 +125,9 @@ a {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 400px) {
   .countriesList {
     grid-template-columns: 1fr;
-  }
-  main {
-    width: 90%;
-  }
-  form {
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-  .search-bar {
-    width: 90%;
-  }
-  .drop-down-menu {
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   .container {
