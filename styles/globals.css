@@ -115,40 +115,26 @@ a {
 .border-country-button {
   font-size: 14px;
 }
-@media only screen and (max-width: 1060px) {
+@media only screen and (max-width: 1300px) {
+  main {
+    padding: 0 3%;
+  }
+}
+@media only screen and (max-width: 992px) {
   .countriesList {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   .countriesList {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   .countriesList {
     grid-template-columns: 1fr;
   }
-
-  .container {
-    grid-template-columns: 1fr;
-  }
-  .information {
-    padding: 30px 0;
-  }
-  .details {
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  .border-countries {
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-  .border-country-button {
-    margin: 0;
-  }
 }
-
 /* DARK MODE */
 body.dark {
   --Text-Color: hsl(0, 0%, 100%);
