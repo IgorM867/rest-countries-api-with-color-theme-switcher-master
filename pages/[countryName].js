@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import Header from "@/components/Header";
+import styles from "../styles/details-page.styles.module.css";
 
 export default function Country() {
   const [country, setCountry] = useState(null);
@@ -38,17 +39,17 @@ export default function Country() {
       <Header />
       <main>
         <Link href="./">
-          <button className="back-button">
+          <button className={styles.backButton}>
             <FontAwesomeIcon icon={faArrowLeft} className="icon" />
             Back
           </button>
         </Link>
         {country && (
-          <div className="container">
+          <div className={styles.container}>
             <img src={country.flags.png} alt={country.flags.alt} />
-            <div className="information">
+            <div className={styles.information}>
               <h2>{country.name.common}</h2>
-              <div className="details">
+              <div className={styles.details}>
                 <div>
                   <p>
                     Native Name: <span>{Object.values(country.name.nativeName)[0].official}</span>
@@ -79,9 +80,9 @@ export default function Country() {
                 </div>
               </div>
               {borderCountries && (
-                <div className="border-countries">
+                <div className={styles.borderCountries}>
                   <p>Border Countries:</p>
-                  <div className="border-countries-buttons">
+                  <div className={styles.borderCountriesButtons}>
                     {borderCountries.map((borderCountry) => {
                       return (
                         <Link
@@ -91,7 +92,7 @@ export default function Country() {
                             query: { countryName: borderCountry.name.official },
                           }}
                         >
-                          <button className="border-country-button">{borderCountry.name.common}</button>
+                          <button className={styles.borderCountryButton}>{borderCountry.name.common}</button>
                         </Link>
                       );
                     })}
